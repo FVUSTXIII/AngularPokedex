@@ -1,12 +1,14 @@
 <div class="pokedex_container">
 
         <div class = "pokemon_card " 
-            *ngFor="let pokemon of pokemons">
+            *ngFor="let pokemon of pokemons"
+            (click)="onDetail(pokemon)">
             <div class="card pokemon_type  {{pokemon.types[0].type.name}}">
                  <img class="pokeportrait" [src]="pokemon.sprites?.other?.dream_world?.front_default" [alt] = "pokemon.name"> 
                  <hr style="opacity: .08;">
                 <div class="card-body">
                     <p class="card-text">
+                            # {{ pokemon.id }}
                            <strong> {{ pokemon.name | titlecase }}</strong>
                     </p>
                 </div>

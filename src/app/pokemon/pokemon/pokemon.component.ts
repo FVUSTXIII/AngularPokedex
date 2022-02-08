@@ -1,6 +1,7 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Inject, Input, OnInit, Output } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Pokemon } from '../interfaces/pokemon.interface';
+import { MAT_BOTTOM_SHEET_DATA } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-pokemon',
@@ -16,13 +17,23 @@ export class PokemonComponent {
     name: '',
     types: [],
     weight: 0
+  };
+ 
+  constructor (@Inject(MAT_BOTTOM_SHEET_DATA) public pokemon_ : any) {
+    this.pokemon = pokemon_.pokemon
   }
-  active_flag : boolean = false;
-  closeModal: string = "";
-  
-  constructor(private modalService: NgbModal) {}
-    
 
-  
-
+  getAbilities(): string {
+    return this.pokemon.abilities.map(x => x.ability.name).join(', ');
+  }
+  getTypes(): string[] {
+   let type_arr : string[] = [];
+    this.pokemon.types.forEach(type => {
+      type_arr.push(type.type.name)
+    });
+    return type_arr;
+  }
+  get pokemons() {
+    return this.pokemon;
+  }
 }

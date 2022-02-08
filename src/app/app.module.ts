@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { PokemonModule } from './pokemon/pokemon.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from "./material.module";
 @NgModule({
   declarations: [
     AppComponent
@@ -12,8 +13,9 @@ import { PokemonModule } from './pokemon/pokemon.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    PokemonModule
-    
+    PokemonModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

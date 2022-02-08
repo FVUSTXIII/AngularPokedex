@@ -20,7 +20,7 @@ html, body {
     display: grid;
     grid-template-columns: 20% 20% 20% 20%;
     column-gap: 5%;
-    row-gap: 25%;
+    row-gap: 5vh;
     padding: 1%;
 }
 .pokemon_card {
@@ -33,3 +33,64 @@ html, body {
     border-radius: 55px;
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.bug {
+    background-image: url('/assets/img/bug.png') !important;
+}
+
+.dark {
+    background-image: url('/assets/img/dark.png') !important;
+}
+.psychic {
+    
+    background-image: url('/assets/img/psychic.png') !important;
+}
+
+.dragon {
+    background-image: url('/assets/img/dragon.png') !important;
+}
+.electric {
+    background-image: url('/assets/img/electric.png') !important;
+}
+.fighting {
+    background-image: url('/assets/img/fighting.png') !important;
+}
+.fire {
+    background-image: url('/assets/img/fire.png') !important;
+}
+.flying {
+    background-image: url('/assets/img/flying.png') !important;
+}
+.ghost {
+    background-image: url('/assets/img/ghost.png') !important;
+}
+
+.grass {
+    background-image: url('/assets/img/grass.png') !important;
+}
+
+.ground {
+    background-image: url('/assets/img/ground.png') !important;
+}
+
+.ice {
+    background-image: url('/assets/img/ice.png') !important;
+}
+
+.normal {
+    background-image: url('/assets/img/normal.png') !important;
+}
+.poison {
+    background-image: url('/assets/img/poison.png') !important;
+}
+.rock {
+    background-image: url('/assets/img/rock.png') !important;
+}
+.steel {
+    background-image: url('/assets/img/steel.png') !important;
+}
+.water {
+    background-image: url('/assets/img/water.png') !important;
+}

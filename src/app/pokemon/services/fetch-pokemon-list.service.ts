@@ -14,8 +14,8 @@ export class FetchPokemonListService {
   constructor(private _http : HttpClient, private _fetchPokemonServiceService : FetchPokemonServiceService) { }
   fetchPokemonList( ) : void { // change to  when possible
     const params = new HttpParams()
-                      .set('limit', '20')
-                      .set('offset', '200');
+                      .set('limit', '50')
+                      .set('offset', '1');
     this._http.get<PokemonList>(`${ this._service_url }/pokemon`, { params : params}).
                               subscribe( ( resp : PokemonList ) => {
                                 resp.results.forEach( result => {

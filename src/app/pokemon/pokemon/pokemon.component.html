@@ -1,1 +1,30 @@
 
+<div class="sheet__img">
+    <img  src="https://projectpokemon.org/images/normal-sprite/{{pokemon.name}}.gif" [alt]="pokemon.name">
+</div>
+<mat-tab-group class="sheet">
+    <mat-tab label="About">
+        <div class="sheet__tab">
+            <div class="sheet__item">
+                <div class="color-gray sheet__item_label">Height: </div>
+                <div class="color-gray sheet__item_label">Weight: </div>
+                <div class="color-gray sheet__item_label">Abilities: </div>
+            </div>
+            <div class="sheet__item">
+                <div>{{pokemon.height}}</div>
+                <div>{{pokemon.weight}}</div>
+                <div>{{getAbilities()}}</div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Types">
+        <div class="sheet__tab">
+            <div class="sheet__item type_container">
+                <div class="color-gray sheet__item_label type {{ type }} " *ngFor="let type of getTypes()"> 
+                                        
+                </div>
+               
+            </div>
+        </div>
+    </mat-tab>
+</mat-tab-group>
